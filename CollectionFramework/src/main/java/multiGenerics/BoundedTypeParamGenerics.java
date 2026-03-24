@@ -12,4 +12,8 @@ public class BoundedTypeParamGenerics {
         }
         return item2;
     }
+
+    public static <T extends Number> double add(T item1, T item2){
+        return item1.doubleValue()+item2.doubleValue();
+    }
 }
