@@ -15,13 +15,11 @@ public class Testtt {
 //        String a=i;
 //        System.out.println(a);
 
-        ArrayList i=new ArrayList();
-        i.add(12);
+        ArrayList<String> i=new ArrayList();
         i.add("Soumya");
 //        int size=i.size();
+        String ss=(String)i.get(0);
+        System.out.println(ss);
 
-        for(int a=0;a<i.size();a++){
-            System.out.println(i.get(a));
-        }
     }
 }
