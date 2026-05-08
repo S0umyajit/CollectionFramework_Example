@@ -17,7 +17,16 @@ public class EnumTT {
         for(Day i:allDays){
             System.out.println(i);
         }
-
         System.out.println(friday.display());
+        System.out.println(friday.getLower());
+
+        Day day=Day.MONDAY;
+
+        switch (day){
+            case FRIDAY -> System.out.println("FRIDAY");
+            case SUNDAY -> System.out.println("SUNDAY");
+            default -> System.out.println("Don't know");
+
+        }
     }
 }
