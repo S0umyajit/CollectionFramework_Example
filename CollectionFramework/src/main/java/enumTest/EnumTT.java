@@ -10,6 +10,7 @@ public class EnumTT {
 
         System.out.println(friday.name());
 
+
         //Enum array
 
         Day allDays[]=Day.values();
@@ -22,11 +23,24 @@ public class EnumTT {
 
         Day day=Day.MONDAY;
 
-        switch (day){
-            case FRIDAY -> System.out.println("FRIDAY");
-            case SUNDAY -> System.out.println("SUNDAY");
-            default -> System.out.println("Don't know");
+//        switch (day){
+//            case FRIDAY -> System.out.println("FRIDAY");
+//            case SUNDAY -> System.out.println("SUNDAY");
+//            default -> System.out.println("Don't know");
+//
+//        }
 
-        }
+        String res=switch(day){
+            case SUNDAY -> "Sunday";
+            case MONDAY ->"Monday";
+            case TUESDAY -> "Tuesday";
+            case WEDNESDAY -> "Wednesday";
+            case THURSDAY -> "Thursday";
+            case FRIDAY -> "Friday";
+            case SATURDAY -> "Saturday";
+        };
+
+        System.out.println("My new testes");
+        System.out.println(res);
     }
 }
