@@ -15,5 +15,10 @@ public class FirstTest {
 
         Collections.sort(list);
         System.out.println(list);
+
+        list.set(2,33);
+        System.out.println(list);
+        list.remove(Integer.valueOf(33));
+        System.out.println(list);
     }
 }
