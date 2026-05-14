@@ -13,5 +13,9 @@ public class TestLinkedList {
 
         System.out.println(linkedList);
         System.out.println(linkedList.getFirst());
+
+
+        linkedList.removeIf(x->x%2==0);
+        System.out.println(linkedList);
     }
 }
