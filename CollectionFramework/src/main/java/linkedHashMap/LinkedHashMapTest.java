@@ -2,11 +2,12 @@ package linkedHashMap;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class LinkedHashMapTest {
 
     public static void main(String[] args) {
-        LinkedHashMap<String,Integer> linkedHashMap=new LinkedHashMap<>();
+        LinkedHashMap<String,Integer> linkedHashMap=new LinkedHashMap<>(10,0.5f,true);
         /**
          *  linkedhashmap use ordered list
          */
@@ -15,8 +16,11 @@ public class LinkedHashMapTest {
         linkedHashMap.put("Banana",23);
         linkedHashMap.put("Pomogranate",24);
         linkedHashMap.put("Tomato",26);
-
-        System.out.println("linkedHashMap: "+linkedHashMap);
+        System.out.println("================LinkedHashMap================");
+        linkedHashMap.get("Apple"); //access order is true so latest data will go the last of the list
+        for(Map.Entry<String,Integer> map:linkedHashMap.entrySet()) {
+            System.out.println(map.getKey()+" "+map.getValue());
+        }
         /**
          * Hashmap don't follow any order
          */
@@ -26,8 +30,9 @@ public class LinkedHashMapTest {
         hashMap.put("Banana",23);
         hashMap.put("Pomogranate",24);
         hashMap.put("Tomato",26);
-
-        System.out.println("hashmap: "+hashMap);
-
+        System.out.println("================HashMap=====================");
+        for(Map.Entry<String,Integer> key:hashMap.entrySet()){
+            System.out.println(key.getKey()+" "+key.getValue());
+        }
     }
 }
