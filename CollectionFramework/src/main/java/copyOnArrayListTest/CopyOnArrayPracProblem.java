@@ -2,7 +2,7 @@ package copyOnArrayListTest;
 
 import java.util.ArrayList;
 
-public class CopyOnArrayPrac {
+public class CopyOnArrayPracProblem {
 
     public static void main(String[] args) {
 
