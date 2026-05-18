@@ -28,5 +28,10 @@ public class TestMap {
             System.out.println(key.getKey()+" "+key.getValue());
         }
 
+        boolean k=map.containsKey(1);
+        System.out.println(k);
+        map.remove(1);
+        System.out.println(map);
+
     }
 }
