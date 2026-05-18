@@ -1,5 +1,6 @@
 package stackPrac;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class StackTest {
@@ -19,7 +20,17 @@ public class StackTest {
         stack.push(5);
         System.out.println(stack);
 
+//Stack using LinkedList
 
+        LinkedList<Integer> linkedList=new LinkedList<>();
+        linkedList.addLast(1);
+        linkedList.addLast(2);
+        linkedList.addLast(3);
+
+        System.out.println("linkedlist: "+linkedList);
+
+        Integer removedele=linkedList.removeLast();
+        System.out.println("element removed from the last: "+removedele);
 
     }
 }
