@@ -34,5 +34,10 @@ public class LinkedHashMapTest {
         for(Map.Entry<String,Integer> key:hashMap.entrySet()){
             System.out.println(key.getKey()+" "+key.getValue());
         }
+
+        int val=hashMap.getOrDefault("Papaya",0);
+        System.out.println(val);
+        hashMap.putIfAbsent("Papaya",79);
+        System.out.println("new HashMap: "+hashMap);
     }
 }
