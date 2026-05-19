@@ -24,7 +24,12 @@ public class Test {
         Comparator<Student> com=Comparator
                 .comparing(Student::getNumber)
                 .reversed()
-                .thenComparing(Comparator.comparing((Student s)->s.getName().length()).reversed())
+                .thenComparing
+                        (
+                        Comparator
+                        .comparing((Student s)->s.getName().length())
+                        .reversed()
+                )
                 .thenComparing(Student::getName);
         myList.sort(com);
         System.out.println(myList);
