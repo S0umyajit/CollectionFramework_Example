@@ -1,5 +1,6 @@
 package weakHashMapEx;
 
+import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
@@ -16,8 +17,9 @@ public class Test {
 
 //        imageCache.put(key1,new Image("image1"));
 //        imageCache.put(key2,new Image("image2"));
-        imageCache.put(new String("img1"),new Image("image1"));
-        imageCache.put(new String("img2"),new Image("image2"));
+//        imageCache.put(new String("img1"),new Image("image1"));
+//        imageCache.put(new String("img2"),new Image("image2"));
+        loadImage(imageCache);
         System.out.println(imageCache);
         /**
          * Here we are manually putting the reference to null
@@ -27,6 +29,7 @@ public class Test {
 //        key1=null;
 //        key2=null;
         System.gc();
+
         simulateAppRunn();
         System.out.println(imageCache);
         System.out.println("Simulate Application run END");
@@ -36,10 +39,17 @@ public class Test {
     public static void simulateAppRunn(){
         try{
             System.out.println("Simulate Application Running");
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         }catch (InterruptedException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public static void loadImage(Map<String,Image> imageCache){
+        String key1=new String("img1");
+        String key2=new String("img2");
+        imageCache.put(key1,new Image("image1"));
+        imageCache.put(key2,new Image("image2"));
     }
 }
 
