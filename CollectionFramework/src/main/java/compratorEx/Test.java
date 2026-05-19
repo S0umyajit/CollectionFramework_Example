@@ -10,7 +10,7 @@ public class Test {
         Student s1=new Student("Soumya",3.4);
         Student s2=new Student("Ananya",3.6);
         Student s3=new Student("Anuj",3.1);
-        Student s4=new Student("Arunima",3.9);
+        Student s4=new Student("Arunima",3.6);
 
         List<Student> list=new ArrayList<>();
 
@@ -18,7 +18,17 @@ public class Test {
         //this will not work as it is casted to int so only int value will be taken here the int value for
         //all are 3
       //  myList.sort((a,b)-> (int) (a.getNumber()-b.getNumber()));
-
+        myList.sort((a,b)->{
+            if(a.getNumber()-b.getNumber()>0){
+                return 1;
+            }
+            else if (a.getNumber()-b.getNumber()<0){
+                return -1;
+            }
+            else {
+                return a.getName().compareTo(b.getName());
+            }
+        });
         System.out.println(myList);
     }
 }
