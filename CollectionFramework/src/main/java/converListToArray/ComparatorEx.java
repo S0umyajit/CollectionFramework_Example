@@ -12,7 +12,13 @@ public class ComparatorEx {
 //        Collections.sort(list);
 //        System.out.println(list);
 
-        list.sort(new StringLengthComparator());
+//        list.sort(new StringLengthComparator());
+//        System.out.println(list);
+
+        /// using lamda
+        list.sort((a,b)->{
+            return b.length()-a.length();
+        });
         System.out.println(list);
 
 
