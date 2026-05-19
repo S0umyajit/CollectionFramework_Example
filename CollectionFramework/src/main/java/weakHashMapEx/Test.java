@@ -8,22 +8,24 @@ import java.util.WeakHashMap;
 public class Test {
     public static void main(String[] args) {
 
-        String key1=new String("img1");
-        String key2=new String("img2");
+//        String key1=new String("img1");
+//        String key2=new String("img2");
         WeakHashMap<String,Image> imageCache=new WeakHashMap<>();
 //        imageCache.put("img1",new Image("image1"));
 //        imageCache.put("img2",new Image("image2"));
 
-        imageCache.put(key1,new Image("image1"));
-        imageCache.put(key2,new Image("image2"));
+//        imageCache.put(key1,new Image("image1"));
+//        imageCache.put(key2,new Image("image2"));
+        imageCache.put(new String("img1"),new Image("image1"));
+        imageCache.put(new String("img2"),new Image("image2"));
         System.out.println(imageCache);
         /**
          * Here we are manually putting the reference to null
          * so that garbage collector can clear it out
          * but we don't use this in PROD
          */
-        key1=null;
-        key2=null;
+//        key1=null;
+//        key2=null;
         System.gc();
         simulateAppRunn();
         System.out.println(imageCache);
