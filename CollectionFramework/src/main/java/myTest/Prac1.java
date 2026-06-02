@@ -1,8 +1,10 @@
 package myTest;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Prac1 {
     public static void main(String[] args) {
@@ -11,8 +13,14 @@ public class Prac1 {
         list.sort(new MyIntComparator());
         System.out.println(list);
         List<String> fruits=Arrays.asList("Guava","Banana","Apple","Lichi");
-        fruits.sort(new MyStringComparator());
-        System.out.println(fruits);
+//        fruits.sort(new MyStringComparator());
+//        System.out.println(fruits);
+//
+        List<String> collect = fruits.stream()
+                .sorted(Comparator.comparing(String::length).reversed()
+                        .thenComparing((s1, s2) -> s1.compareTo(s2)))
+                .collect(Collectors.toList());
+        System.out.println(collect);
     }
 }
 
