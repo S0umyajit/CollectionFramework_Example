@@ -2,12 +2,14 @@ package myTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 import java.util.Vector;
 
 public class VectorEx {
     public static void main(String[] args) {
 
-        Vector<Integer>a1=new Vector<>();
+        Stack<Integer>a1=new Stack<>();
+
 
         Thread t1=new Thread(()->{
            for(int i=1;i<=1000;i++){
